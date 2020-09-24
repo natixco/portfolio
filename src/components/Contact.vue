@@ -5,9 +5,9 @@
     <div class="contact-container">
       <div class="contact-inner-container">
         <ul class="contact-list">
-          <li><Link text="GitHub" /></li>
-          <li><Link text="Twitter" /></li>
-          <li><Link text="Email" /></li>
+          <li><Link src="https://github.com/natixco" text="GitHub" /></li>
+          <li><Link src="https://twitter.com/natixco" text="Twitter" /></li>
+          <li><Link src="mailto:patrikvisloczki@gmail.com" text="Email" /></li>
         </ul>
       </div>
       <div class="contact-inner-container">
@@ -15,7 +15,7 @@
           <input type="text" placeholder="Name">
           <input type="email" placeholder="Email">
           <textarea placeholder="Message"></textarea>
-          <button>Let's talk</button>
+          <button>Let's talk!</button>
         </form>
       </div>
     </div>
