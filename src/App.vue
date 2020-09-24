@@ -1,11 +1,13 @@
 <template>
-  <Header />
-  <About />
-  <div data-sal="fade" style="--sal-duration: .6s;">
-    <Works />
-    <Contact />
+  <div>
+    <Header />
+    <About />
+    <div data-sal="fade" style="--sal-duration: .6s;">
+      <Works />
+      <Contact />
+    </div>
+    <Cursor />
   </div>
-  <Cursor />
 </template>
 
 <script>
@@ -35,8 +37,7 @@ export default defineComponent({
     document.title = 'Patrick Vislóczki';
 
     document.addEventListener('mousedown', (e) => {
-      let type = e.target.type;
-      if(type === 'text' || type === 'email' || type === 'textarea' || type === 'submit') return;
+      if(e.target.dataset.colorchange === 'false') return;
 
       let color, colorDarker, isTextWhite = false;
       switch(this.color) {
