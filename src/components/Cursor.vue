@@ -44,8 +44,8 @@ export default defineComponent({
 
 .cursor
   position: fixed
-  top: 0
-  left: 0
+  top: -30px
+  left: -30px
   width: 30px
   height: 30px
   border-radius: 50%
