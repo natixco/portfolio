@@ -8,7 +8,7 @@
         <div class="center">
           <h1>Tabby</h1>
           <div class="description">
-            <p>It's a simple timetable desktop application for Windows, made with Angular and Electron.</p>
+            <p>It's a simple timetable desktop application for Windows to track your school schedule, made with Angular and Electron.</p>
             <Link src="https://github.com/natixco/tabby" text="Check out the source code" />
           </div>
         </div>
@@ -17,7 +17,7 @@
         <div class="center">
           <h1>FivePD</h1>
           <div class="description">
-            <p>It's a police modification for multiplayer GTA V (FiveM), written in C# in cooperation with my <a href="https://github.com/KDani-99" target="_blank">friend</a>.</p>
+            <p>It's a police modification for GTA V multiplayer (FiveM), written in C# in cooperation with a <a href="https://github.com/KDani-99" target="_blank">friend</a> of mine.</p>
             <Link src="https://twitter.com/five_pd" text="Check it out" />
           </div>
         </div>
