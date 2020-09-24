@@ -34,7 +34,7 @@ export default defineComponent({
   mounted() {
     sal({once: false, threshold: 0.17});
 
-    document.title = 'Patrick Vislóczki';
+    document.title = 'Patrik Vislóczki';
 
     document.addEventListener('mousedown', (e) => {
       if(e.target.dataset.colorchange === 'false') return;

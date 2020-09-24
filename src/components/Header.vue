@@ -5,7 +5,7 @@
       <div data-sal="slide-down" style="--sal-duration: .4s; --sal-delay: .1s">
         <h1 class="title">
           Hey, my <br>
-          name's <span>Patrick</span>.<br>
+          name's <span>Patrik</span>.<br>
           I'm a developer,
         </h1>
         <h1 class="title-small">and sometimes a designer 🙈</h1>
