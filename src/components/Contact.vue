@@ -110,6 +110,8 @@ export default defineComponent({
           transition: all .3s ease-out
           &:hover
             transform: translateY(-2px)
+          &:focus
+            background: color(accent-darker)
 
 @media only screen and (max-width: 800px)
   .contact-container

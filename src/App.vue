@@ -36,17 +36,38 @@ export default defineComponent({
 
     document.addEventListener('mousedown', (e) => {
       let type = e.target.type;
-      if(type === 'text' || type === 'textarea' || type === 'submit') return;
+      if(type === 'text' || type === 'email' || type === 'textarea' || type === 'submit') return;
 
-      let color, isTextWhite = false;
+      let color, colorDarker, isTextWhite = false;
       switch(this.color) {
-        case 0: color = '#008BF8'; isTextWhite = true; break;
-        case 1: color = '#04e762'; isTextWhite = false; break;
-        case 2: color = '#731DD8'; isTextWhite = true; break;
-        case 3: color = '#FF3C38'; isTextWhite = true; break;
-        case 4: color = '#F5B700'; isTextWhite = false; break;
+        case 0:
+          color = 'hsl(206, 100%, 49%)';
+          colorDarker = 'hsl(206, 100%, 44%)';
+          isTextWhite = true;
+          break;
+        case 1:
+          color = 'hsl(145, 97%, 46%)';
+          colorDarker = 'hsl(145, 97%, 41%)';
+          isTextWhite = false;
+          break;
+        case 2:
+          color = 'hsl(268, 76%, 48%)';
+          colorDarker = 'hsl(268, 100%, 38%)';
+          isTextWhite = true;
+          break;
+        case 3:
+          color = 'hsl(1, 100%, 61%)';
+          colorDarker = 'hsl(1, 80%, 51%)';
+          isTextWhite = true;
+          break;
+        case 4:
+          color = 'hsl(45, 100%, 48%)';
+          colorDarker = 'hsl(45, 100%, 43%)';
+          isTextWhite = false;
+          break;
       }
       document.documentElement.style.setProperty('--color-accent', color);
+      document.documentElement.style.setProperty('--color-accent-darker', colorDarker);
       document.documentElement.style.setProperty('--color-text', isTextWhite ? 'white' : '#2F3437');
 
       if(this.color === 4) this.color = 0;
