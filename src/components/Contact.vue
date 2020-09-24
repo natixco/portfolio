@@ -1,22 +1,32 @@
 <template>
-  <PolkaDots id="polka2" rows="20" cols="5"/>
-  <div class="center">
-    <Line text="nice to meet you! 👋" />
-    <div class="contact-container">
-      <div class="contact-inner-container">
-        <ul class="contact-list">
-          <li><Link src="https://github.com/natixco" text="GitHub" /></li>
-          <li><Link src="https://twitter.com/natixco" text="Twitter" /></li>
-          <li><Link src="mailto:patrikvisloczki@gmail.com" text="Email" /></li>
-        </ul>
-      </div>
-      <div class="contact-inner-container">
-        <form>
-          <input type="text" placeholder="Name">
-          <input type="email" placeholder="Email">
-          <textarea placeholder="Message"></textarea>
-          <button>Let's talk!</button>
-        </form>
+  <div>
+    <PolkaDots id="polka2" rows="20" cols="5"/>
+    <div class="center">
+      <Line text="nice to meet you! 👋" />
+      <div class="contact-container">
+        <div class="contact-inner-container">
+          <ul class="contact-list">
+            <li><Link src="https://github.com/natixco" text="GitHub" /></li>
+            <li><Link src="https://twitter.com/natixco" text="Twitter" /></li>
+            <li><Link src="mailto:patrikvisloczki@gmail.com" text="Email" /></li>
+          </ul>
+        </div>
+        <div class="contact-inner-container">
+          <form @submit="submitForm">
+            <input
+              type="text"
+              placeholder="Name"
+              v-model="name"
+              v-bind:class="{invalid: nameError}">
+            <input
+              type="email"
+              placeholder="Email"
+              v-model="email"
+              v-bind:class="{invalid: emailError}">
+            <textarea placeholder="Message" v-model="message" v-bind:class="{invalid: messageError}"></textarea>
+            <button>Let's talk!</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
@@ -34,6 +44,42 @@ export default defineComponent({
     Line,
     Link,
     PolkaDots
+  },
+  data: () => ({
+    name: null,
+    nameError: false,
+    email: null,
+    emailError: false,
+    message: null,
+    messageError: false
+  }),
+  methods: {
+    async submitForm(e) {
+      e.preventDefault();
+      this.nameError = (this.name === null || this.name.length === 0);
+      this.emailError = (this.email === null || this.email.length === 0);
+      this.messageError = (this.message === null || this.message.length === 0);
+      if(this.nameError || this.emailError || this.messageError) return;
+      let data = {
+        name: this.name,
+        email: this.email,
+        message: this.message
+      };
+      const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      };
+      let asd = await fetch('/api/email', requestOptions)
+        .then(res => {
+          if(res['status'] === 400) console.log('An error has occured. Couldn\'t send the message.');
+          else console.log('👍');
+        })
+        .catch(err => {
+          console.log('An error has occured. Couldn\'t send the message.');
+        })
+      if(!asd) return;
+    }
   }
 });
 </script>
@@ -88,6 +134,9 @@ export default defineComponent({
           transition: all .3s ease-out
           &:hover, &:focus
             border-color: color(accent)
+
+        input.invalid, textarea.invalid
+          border-color: red
 
         textarea
           padding: 15px
