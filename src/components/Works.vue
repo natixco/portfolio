@@ -1,27 +1,29 @@
 <template>
-  <div class="center">
-    <Line text="works"/>
+  <div data-sal="fade" style="--sal-duration: .4s;">
+    <div class="center">
+      <Line text="works"/>
+    </div>
+    <ul class="list-container">
+      <li class="list-item">
+        <div class="center">
+          <h1>Tabby</h1>
+          <div class="description">
+            <p>It's a simple timetable desktop application for Windows, made with Angular and Electron.</p>
+            <Link src="https://github.com/natixco/tabby" text="Check out the source code" />
+          </div>
+        </div>
+      </li>
+      <li class="list-item">
+        <div class="center">
+          <h1>FivePD</h1>
+          <div class="description">
+            <p>It's a police modification for multiplayer GTA V (FiveM), written in C# in cooperation with my <a href="https://github.com/KDani-99" target="_blank">friend</a>.</p>
+            <Link src="https://twitter.com/five_pd" text="Check it out" />
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
-  <ul class="list-container">
-    <li class="list-item">
-      <div class="center">
-        <h1>Tabby</h1>
-        <div class="description">
-          <p>It's a simple timetable desktop application for Windows, made with Angular and Electron.</p>
-          <Link src="https://github.com/natixco/tabby" text="Check out the source code" />
-        </div>
-      </div>
-    </li>
-    <li class="list-item">
-      <div class="center">
-        <h1>FivePD</h1>
-        <div class="description">
-          <p>It's a police modification for multiplayer GTA V (FiveM), written in C# in cooperation with my <a href="https://github.com/KDani-99" target="_blank">friend</a>.</p>
-          <Link src="https://twitter.com/five_pd" text="Check it out" />
-        </div>
-      </div>
-    </li>
-  </ul>
 </template>
 
 <script>
@@ -50,7 +52,7 @@ export default defineComponent({
 .list-container
   position: relative
   margin-top: 40px
-  padding-bottom: 200px
+  padding-bottom: 150px
 
   .list-item
     list-style: none

@@ -48,7 +48,7 @@ export default defineComponent({
 .center
   left: 50%
   transform: translateX(-50%)
-  padding-bottom: 150px
+  padding-bottom: 100px
 
   .contact-container
     position: relative
@@ -103,7 +103,7 @@ export default defineComponent({
           height: 50px
           border-radius: 12px
           background: color(accent)
-          color: $gray
+          color: color(text)
           font-size: 18px
           cursor: pointer
           width: 150px

@@ -1,15 +1,17 @@
 <template>
   <header>
     <div class="center">
-      <PolkaDots id="polka1" rows="6" cols="5"/>
-      <h1 class="title">
-        Hey, my <br>
-        name's <span>Patrick</span>.<br>
-        I'm a developer,
-      </h1>
-      <h1 class="title-small">and sometimes a designer 🙈</h1>
+      <PolkaDots id="polka1" rows="6" cols="5" data-sal="fade" style="--sal-duration: .2s;"/>
+      <div data-sal="slide-down" style="--sal-duration: .4s; --sal-delay: .1s">
+        <h1 class="title">
+          Hey, my <br>
+          name's <span>Patrick</span>.<br>
+          I'm a developer,
+        </h1>
+        <h1 class="title-small">and sometimes a designer 🙈</h1>
+      </div>
     </div>
-    <svg id="shape1" xmlns="http://www.w3.org/2000/svg" width="385.384" height="414.375" viewBox="0 0 385.384 414.375">
+    <svg data-sal="slide-left" style="--sal-duration: .4s;" id="shape1" xmlns="http://www.w3.org/2000/svg" width="385.384" height="414.375" viewBox="0 0 385.384 414.375">
       <path d="M147.4,46.027a30,30,0,0,1,52.194,0L321.6,261.2A30,30,0,0,1,295.5,306H51.5a30,30,0,0,1-26.1-44.8Z" transform="matrix(0.259, 0.966, -0.966, 0.259, 295.573, 0)" fill="#f5b700"/>
     </svg>
   </header>

@@ -20,6 +20,8 @@ export default defineComponent({
   text-decoration: none
   padding: 3px 5px
   transition: color .2s ease
+  &:hover
+    color: color(text)
   &::before
     content: ''
     position: absolute

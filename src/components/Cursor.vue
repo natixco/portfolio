@@ -12,8 +12,6 @@ export default defineComponent({
     dot: null
   }),
   mounted() {
-    document.body.style.cursor = 'none';
-
     this.dot = document.querySelector('.cursor');
     this.elements = [
       ...document.querySelectorAll('a'),
@@ -46,12 +44,14 @@ export default defineComponent({
 
 .cursor
   position: fixed
+  top: 0
+  left: 0
   width: 30px
   height: 30px
   border-radius: 50%
   border: 1px solid $gray
   background: transparent
-  transition: transform .3s ease-out, width .1s ease-out, height .1s ease-out
+  transition: transform .3s, top .1s, left .1s
   z-index: 9999
   pointer-events: none
 
