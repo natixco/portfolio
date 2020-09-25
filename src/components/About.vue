@@ -6,7 +6,7 @@
     <div class="center" data-sal="fade" style="--sal-duration: .4s; --sal-delay: .1s">
       <Line text="about me"/>
       <p class="text">
-        I'm living in Hungary and I've been programming for 5 years now. I enjoy creating beautiful sites and apps while trying to write quality code.
+        I'm living in Hungary and I've been programming for 6 years now. I enjoy creating beautiful sites and apps while trying to write quality code.
         I have experience with Angular, TypeScript, NodeJS, Electron and C#. Also I've used ExpressJS and NestJS for a little bit, but I'm not a backend guy.
       </p>
     </div>
