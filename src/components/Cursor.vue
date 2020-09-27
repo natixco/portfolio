@@ -9,7 +9,10 @@ export default defineComponent({
   name: 'Dot',
   data: () => ({
     elements: [],
-    dot: null
+    dot: null,
+    mousex: 0,
+    mousey: 0,
+    canResize: false
   }),
   mounted() {
     this.dot = document.querySelector('.cursor');
@@ -22,19 +25,29 @@ export default defineComponent({
 
     // dot movement
     document.addEventListener('mousemove', (e) => {
-      this.dot.style.top = `${e.clientY - 15}px`;
-      this.dot.style.left = `${e.clientX - 15}px`;
+      this.mousex = e.clientX;
+      this.mousey = e.clientY;
     });
 
-    // links, input, button and scroll down button
+    requestAnimationFrame(this.cursorMove);
+
+    // links, inputs, button
     this.elements.forEach(item => {
       item.addEventListener('mouseover', (e) => {
-        this.dot.style.transform = `scale(0)`;
+        this.canResize = true;
       });
       item.addEventListener('mouseout', (e) => {
-        this.dot.style.transform = `scale(1)`;
+        this.canResize = false;
       });
     });
+  },
+  methods: {
+    cursorMove() {
+      requestAnimationFrame(this.cursorMove);
+
+      if (this.canResize) this.dot.style.transform = `translate(${this.mousex + 15}px, ${this.mousey + 15}px) scale(0)`;
+      else this.dot.style.transform = `translate(${this.mousex + 15}px, ${this.mousey + 15}px) scale(1)`;
+    }
   }
 });
 </script>
@@ -51,7 +64,7 @@ export default defineComponent({
   border-radius: 50%
   border: 1px solid $gray
   background: transparent
-  transition: transform .3s, top .1s, left .1s
+  transition: transform .1s
   z-index: 9999
   pointer-events: none
 
