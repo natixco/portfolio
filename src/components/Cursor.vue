@@ -6,16 +6,16 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'Dot',
+  name: 'Cursor',
   data: () => ({
     elements: [],
-    dot: null,
+    cursor: null,
     mousex: 0,
     mousey: 0,
     canResize: false
   }),
   mounted() {
-    this.dot = document.querySelector('.cursor');
+    this.cursor = document.querySelector('.cursor');
     this.elements = [
       ...document.querySelectorAll('a'),
       ...document.querySelectorAll('input'),
@@ -23,7 +23,7 @@ export default defineComponent({
       ...document.querySelectorAll('button')
     ];
 
-    // dot movement
+    // cursor movement
     document.addEventListener('mousemove', (e) => {
       this.mousex = e.clientX;
       this.mousey = e.clientY;
@@ -45,8 +45,8 @@ export default defineComponent({
     cursorMove() {
       requestAnimationFrame(this.cursorMove);
 
-      if (this.canResize) this.dot.style.transform = `translate(${this.mousex + 15}px, ${this.mousey + 15}px) scale(0)`;
-      else this.dot.style.transform = `translate(${this.mousex + 15}px, ${this.mousey + 15}px) scale(1)`;
+      if (this.canResize) this.cursor.style.transform = `translate(${this.mousex + 15}px, ${this.mousey + 15}px) scale(0)`;
+      else this.cursor.style.transform = `translate(${this.mousex + 15}px, ${this.mousey + 15}px) scale(1)`;
     }
   }
 });
