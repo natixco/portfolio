@@ -1,19 +1,15 @@
-# portfolio
+This is the code of my first portfolio site. It was built with Vue 3.
 
-## Project setup
-```
-npm install
-```
+## Live version
+patrikvisloczki.com
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Run it locally
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+ 1. Clone the repo
+ `$ git clone https://github.com/natixco/portfolio.git`
+2. Install the dependencies
+`$ npm i`
+3. Install @vue-cli globally
+`$ npm i -g @vue-cli`
+4. Run the site
+`$ npm run serve`
