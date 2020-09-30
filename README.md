@@ -1,7 +1,7 @@
 This repo contains my first portfolio site's frontend code. It was made in Vue 3 and it's being hosted by an ExpressJS backend.
 
 ## Live version
-[patrikvisloczki.com](patrikvisloczki.com)
+[patrikvisloczki.com](https://www.patrikvisloczki.com)
 
 ## Run it locally
  1. Clone the repo
