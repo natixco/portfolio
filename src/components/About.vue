@@ -7,7 +7,7 @@
       <Line text="about me"/>
       <p class="text">
         I'm living in Hungary and I've been programming for 6 years now. I enjoy creating beautiful sites and apps while trying to write quality code.
-        I have experience with Angular, TypeScript, NodeJS, Electron and C#. Also I've used ExpressJS and NestJS for a little bit, but I'm not a backend guy.
+        I have experience with Angular, Vue, TypeScript, NodeJS, Electron and C#. Also I've used ExpressJS for a little bit, but I'm not a backend guy.
       </p>
     </div>
   </div>
