@@ -1,4 +1,4 @@
-This repo contains my first portfolio site's frontend code. It was made with [NuxtJS](https://nuxtjs.org/)and it's being hosted by an ExpressJS backend.
+This repo contains my first portfolio site's frontend code. It was made with [NuxtJS](https://nuxtjs.org/) and it's being hosted by an ExpressJS backend.
 
 ## Live version
 [patrikvisloczki.com](https://www.patrikvisloczki.com)
