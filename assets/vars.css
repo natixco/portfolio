@@ -1,0 +1,5 @@
+:root {
+  --color-accent: hsl(45, 100%, 48%);
+  --color-accent-darker: hsl(45, 100%, 43%);
+  --color-text: hsl(203, 8%, 20%);
+}

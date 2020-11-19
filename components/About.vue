@@ -4,7 +4,7 @@
       <path data-name="Subtraction 1" d="M167,351.232V43.768a29.877,29.877,0,0,1,20.383,8.775L311.127,176.287a29.976,29.976,0,0,1,0,42.427L187.384,342.457A29.877,29.877,0,0,1,167,351.232Z" transform="translate(-167 -43.768)" fill="#f5b700"/>
     </svg>
     <div class="center" data-sal="fade" style="--sal-duration: .4s; --sal-delay: .1s">
-      <Line text="about me"/>
+      <SectionTitle text="about me"/>
       <p class="text">
         I'm living in Hungary and I've been programming for 6 years now. I enjoy creating beautiful sites and apps while trying to write quality code.
         I have experience with Angular, Vue, TypeScript, NodeJS, Electron and C#. Also I've used ExpressJS for a little bit, but I'm not a backend guy.
@@ -12,18 +12,6 @@
     </div>
   </div>
 </template>
-
-<script>
-import { defineComponent } from 'vue';
-import Line from './Line.vue';
-
-export default defineComponent({
-  name: 'About',
-  components: {
-    Line
-  }
-});
-</script>
 
 <style scoped lang="sass">
 @import '../assets/_import'

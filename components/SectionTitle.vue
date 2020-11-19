@@ -6,12 +6,9 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  name: 'Line',
+export default {
   props: ['text']
-});
+}
 </script>
 
 <style scoped lang="sass">

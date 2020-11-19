@@ -3,10 +3,7 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  name: 'Cursor',
+export default {
   data: () => ({
     elements: [],
     cursor: null,
@@ -49,7 +46,7 @@ export default defineComponent({
       else this.cursor.style.transform = `translate(${this.mousex + 15}px, ${this.mousey + 15}px) scale(1)`;
     }
   }
-});
+}
 </script>
 
 <style scoped lang="sass">

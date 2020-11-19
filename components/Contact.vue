@@ -2,7 +2,7 @@
   <div>
     <PolkaDots id="polka2" rows="20" cols="5"/>
     <div class="center">
-      <Line text="nice to meet you! 👋" />
+      <SectionTitle text="nice to meet you! 👋" />
       <div class="contact-container">
         <div class="contact-inner-container">
           <ul class="contact-list">
@@ -43,18 +43,7 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
-import Line from './Line.vue';
-import Link from './Link.vue';
-import PolkaDots from './PolkaDots.vue';
-
-export default defineComponent({
-  name: 'Contact',
-  components: {
-    Line,
-    Link,
-    PolkaDots
-  },
+export default {
   data: () => ({
     name: null,
     nameError: false,
@@ -102,7 +91,7 @@ export default defineComponent({
         })
     }
   }
-});
+}
 </script>
 
 <style scoped lang="sass">

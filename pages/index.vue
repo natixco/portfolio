@@ -6,35 +6,19 @@
       <Works />
       <Contact />
     </div>
-    <Cursor />
+    <CustomCursor />
   </div>
 </template>
 
 <script>
-import { defineComponent } from 'vue';
-import Header from './components/Header.vue';
-import About from './components/About.vue';
-import Works from './components/Works.vue';
-import Contact from './components/Contact.vue';
-import Cursor from './components/Cursor.vue';
-import sal from 'sal.js';
+import sal from 'sal.js'
 
-export default defineComponent({
-  name: 'App',
-  components: {
-    Header,
-    About,
-    Works,
-    Contact,
-    Cursor
-  },
+export default {
   data: () => ({
     color: 0
   }),
   mounted() {
     sal({once: false, threshold: 0.17});
-
-    document.title = 'Patrik Vislóczki';
 
     document.addEventListener('mousedown', (e) => {
       if(e.target.dataset.colorchange === 'false') return;
@@ -75,12 +59,12 @@ export default defineComponent({
       else this.color += 1;
     });
   }
-});
+}
 </script>
 
+
 <style lang="sass">
-@import './assets/_import'
-@import '../node_modules/sal.js/dist/sal.css'
+@import '../assets/_import'
 
 *
   margin: 0
@@ -88,11 +72,11 @@ export default defineComponent({
   box-sizing: border-box
   font-family: 'Poppins'
   color: $gray
-  transition: color .2s ease, fill .2s ease
+  transition: color .3s ease, fill .3s ease
 
 body
   overflow-x: hidden
-  cursor: url('./assets/cursor.png') 3 3, auto
+  cursor: url('../assets/cursor.png') 3 3, auto
 
 .center
   position: relative
@@ -123,3 +107,4 @@ body
     width: 80vw
 
 </style>
+

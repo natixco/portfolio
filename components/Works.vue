@@ -1,7 +1,7 @@
 <template>
   <div data-sal="fade" style="--sal-duration: .4s;">
     <div class="center">
-      <Line text="works"/>
+      <SectionTitle text="works"/>
     </div>
     <ul class="list-container">
       <li class="list-item">
@@ -25,20 +25,6 @@
     </ul>
   </div>
 </template>
-
-<script>
-import { defineComponent } from 'vue';
-import Line from './Line.vue';
-import Link from './Link.vue';
-
-export default defineComponent({
-  name: 'Works',
-  components: {
-    Line,
-    Link
-  }
-});
-</script>
 
 <style scoped lang="sass">
 @import '../assets/_import'

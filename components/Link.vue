@@ -3,12 +3,9 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  name: 'Link',
+export default {
   props: ['text', 'src']
-});
+}
 </script>
 
 <style scoped lang="sass">
@@ -20,6 +17,7 @@ export default defineComponent({
   text-decoration: none
   padding: 3px 5px
   transition: color .2s ease
+  user-select: none
   &:hover
     color: color(text)
   &::before

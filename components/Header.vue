@@ -17,18 +17,6 @@
   </header>
 </template>
 
-<script>
-import { defineComponent } from 'vue';
-import PolkaDots from './PolkaDots.vue';
-
-export default defineComponent({
-  name: 'Header',
-  components: {
-    PolkaDots
-  }
-});
-</script>
-
 <style scoped lang="sass">
 @import '../assets/_import'
 

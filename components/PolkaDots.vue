@@ -3,17 +3,14 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  name: 'PolkaDots',
+export default {
   props: ['id', 'rows', 'cols'],
   mounted() {
     let d = document.querySelector(`#${this.id}`);
     d.style.width = `${20 * this.cols}px`;
     d.style.height = `${20 * this.rows}px`;
   }
-});
+};
 </script>
 
 <style scoped lang="sass">
