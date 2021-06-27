@@ -6,8 +6,8 @@
     <div class="center" data-sal="fade" style="--sal-duration: .4s; --sal-delay: .1s">
       <SectionTitle text="about me"/>
       <p class="text">
-        I'm living in Hungary and I've been programming for 6 years now. I enjoy creating beautiful sites and apps while trying to write quality code.
-        I have experience with Angular, Vue, TypeScript, NodeJS, Electron and C#. Also I've used ExpressJS for a little bit, but I'm not a backend guy.
+        I live in Hungary and I've been programming for 6 years now. I enjoy creating beautiful sites and apps while trying to write quality code.
+        Currently I work as a full stack developer with PHP. I have experience with Angular, Vue, React, TypeScript, NodeJS, Electron and C#.
       </p>
     </div>
   </div>
@@ -48,9 +48,7 @@
       font-size: 22px
 
   #shape2
-    left: 100%
-    margin-top: 70px
-    transform: rotate(180deg) translateX(60%)
+    display: none
 
 @media only screen and (max-width: 600px)
   .center

@@ -142,6 +142,8 @@ export default {
           color: $gray
           margin-bottom: 25px
           transition: all .3s ease-out
+          appearance: none
+          -webkit-appearance: none
           &:hover, &:focus
             border-color: color(accent)
 

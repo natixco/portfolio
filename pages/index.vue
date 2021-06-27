@@ -1,5 +1,9 @@
 <template>
   <div>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+    </head>
     <Header />
     <About />
     <div data-sal="fade" style="--sal-duration: .6s;">
@@ -73,6 +77,9 @@ export default {
   font-family: 'Poppins'
   color: $gray
   transition: color .3s ease, fill .3s ease
+
+html
+  overflow-x: hidden
 
 body
   overflow-x: hidden
